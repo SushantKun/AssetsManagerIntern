@@ -18,6 +18,7 @@ export class AssetService {
             relations: ['owner', 'category', 'tags']
         });
     }
+    
 
     async create(data: Partial<Asset>): Promise<Asset> {
         const asset = this.assetRepository.create({
