@@ -18,7 +18,6 @@ export class AssetService {
             relations: ['owner', 'category', 'tags']
         });
     }
-    
 
     async create(data: Partial<Asset>): Promise<Asset> {
         const asset = this.assetRepository.create({
@@ -27,6 +26,7 @@ export class AssetService {
             isActive: true
         });
         return this.assetRepository.save(asset);
+        return asset;
     }
 // updated 
     async update(id: number, data: Partial<Asset>): Promise<Asset | null> {
