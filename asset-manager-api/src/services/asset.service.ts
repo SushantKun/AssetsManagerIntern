@@ -50,10 +50,7 @@ export class AssetService {
             await this.assetRepository.remove(asset);
         }
 
-    else
-        throw new Error('Asset not found');  
-
-    
+   
         
 
 
