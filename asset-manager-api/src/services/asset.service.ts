@@ -26,7 +26,6 @@ export class AssetService {
             isActive: true
         });
         return this.assetRepository.save(asset);
-        return asset;
     }
 // updated 
     async update(id: number, data: Partial<Asset>): Promise<Asset | null> {
@@ -38,6 +37,8 @@ export class AssetService {
         if (data.purchaseDate) {
             data.purchaseDate = new Date(data.purchaseDate.toString());
         }
+        else {
+            data.purchaseDate = asset.purchaseDate; }
 
         Object.assign(asset, data);
         return this.assetRepository.save(asset);
@@ -48,5 +49,13 @@ export class AssetService {
         if (asset) {
             await this.assetRepository.remove(asset);
         }
+
+    else
+        throw new Error('Asset not found');  
+
+    
+        
+
+
     }
 } 
