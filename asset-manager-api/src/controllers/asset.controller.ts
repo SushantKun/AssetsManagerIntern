@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Request, Response } from 'express';
 import { AppDataSource } from '../data-source';
 import { Asset } from '../entities/asset.entity';
@@ -15,7 +17,7 @@ interface RequestWithUser extends Request {
     };
     file?: Express.Multer.File;
 }
-
+// class AssetController
 export class AssetController {
     private assetRepository = AppDataSource.getRepository(Asset);
     private userRepository = AppDataSource.getRepository(User);

@@ -25,7 +25,6 @@ export class UserController {
           return res.status(400).json({ message: 'Email is already taken' });
         }
       }
-
       // Get current user
       const user = await this.userRepository.findOne({
         where: { id: userId }
