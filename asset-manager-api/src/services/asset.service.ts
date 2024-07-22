@@ -37,8 +37,6 @@ export class AssetService {
         if (data.purchaseDate) {
             data.purchaseDate = new Date(data.purchaseDate.toString());
         }
-        else {
-            data.purchaseDate = asset.purchaseDate; }
 
         Object.assign(asset, data);
         return this.assetRepository.save(asset);
