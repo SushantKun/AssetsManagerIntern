@@ -40,6 +40,7 @@ export class AssetService {
 
         Object.assign(asset, data);
         return this.assetRepository.save(asset);
+        return asset;
     }
 
     async delete(id: number): Promise<void> {
