@@ -8,6 +8,7 @@ export class Asset {
     @PrimaryGeneratedColumn()
     id: number;
 
+    
     @Column()
     name: string;
 
