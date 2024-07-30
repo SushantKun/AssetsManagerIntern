@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, ManyToMany, JoinTabl
 import { User } from './user.entity';
 import { Category } from './category.entity';
 import { Tag } from './tag.entity';
-
+// assets class 
 @Entity()
 export class Asset {
     @PrimaryGeneratedColumn()
