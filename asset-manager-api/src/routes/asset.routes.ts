@@ -4,6 +4,7 @@ import { authMiddleware } from '../middleware/auth.middleware';
 import multer from 'multer';
 import * as path from 'path';
 
+
 interface RequestWithUser extends Request {
     user: {
         userId: number;
@@ -15,7 +16,7 @@ interface RequestWithUser extends Request {
 const router = Router();
 const assetController = new AssetController();
 
-// Configure multer for file uploads
+// Configure multer for file 
 const storage = multer.diskStorage({
     destination: 'uploads/',
     filename: (req, file, cb) => {
