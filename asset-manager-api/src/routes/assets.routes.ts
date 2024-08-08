@@ -7,7 +7,7 @@ import path from 'path';
 const router = Router();
 const assetController = new AssetController();
 
-// Configure multer for file uploads
+// Configure multer for file 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, path.join(__dirname, '../../uploads'));
