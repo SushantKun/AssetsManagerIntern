@@ -13,7 +13,7 @@ const registerHandler: RequestHandler = async (req, res, next) => {
     }
 };
 
-// Login user
+// Login 
 const loginHandler: RequestHandler = async (req, res, next) => {
     try {
         await authController.login(req, res);
