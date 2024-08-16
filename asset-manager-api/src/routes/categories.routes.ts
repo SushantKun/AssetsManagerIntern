@@ -6,7 +6,7 @@ import { authMiddleware } from '../middleware/auth.middleware';
 const router = Router();
 const categoryRepository = AppDataSource.getRepository(Category);
 
-// Get all categories
+// Get all 
 const getAllHandler: RequestHandler = async (req, res, next) => {
     try {
         const categories = await categoryRepository.find();
