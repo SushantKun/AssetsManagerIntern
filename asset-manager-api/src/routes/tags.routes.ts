@@ -6,7 +6,7 @@ import { Tag } from '../entities/tag.entity';
 const router = Router();
 const tagRepository = AppDataSource.getRepository(Tag);
 
-// Get all tags
+// Get all 
 const getAllHandler: RequestHandler = async (req, res, next) => {
     try {
         const tags = await tagRepository.find();
