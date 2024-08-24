@@ -12,7 +12,7 @@ interface RequestWithUser extends Request {
 const router = Router();
 const userController = new UserController();
 
-// Update user profile
+// Update user 
 router.put('/profile', authMiddleware, async (req: Request, res: Response, next: NextFunction) => {
   try {
     await userController.updateProfile(req as RequestWithUser, res);
