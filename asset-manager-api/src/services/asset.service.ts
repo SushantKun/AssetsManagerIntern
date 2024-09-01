@@ -27,7 +27,7 @@ export class AssetService {
         });
         return this.assetRepository.save(asset);
     }
-
+// updated 
     async update(id: number, data: Partial<Asset>): Promise<Asset | null> {
         const asset = await this.findById(id);
         if (!asset) {
