@@ -44,9 +44,7 @@ export class AssetService {
 
     async delete(id: number): Promise<void> {
         const asset = await this.findById(id);
-        if (asset) {
-            await this.assetRepository.remove(asset);
-        }
+        
         
 
   
