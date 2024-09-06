@@ -40,12 +40,16 @@ export class AssetService {
 
         Object.assign(asset, data);
         return this.assetRepository.save(asset);
+        return asset;
     }
 
     async delete(id: number): Promise<void> {
         const asset = await this.findById(id);
         if (asset) {
             await this.assetRepository.remove(asset);
+        }
+        else {
+            throw new Error('Asset not found');
         }
         
 
