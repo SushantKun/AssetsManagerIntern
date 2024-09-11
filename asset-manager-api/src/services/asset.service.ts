@@ -40,8 +40,6 @@ export class AssetService {
 
         Object.assign(asset, data);
         return this.assetRepository.save(asset);
-        return asset;
-        return this.assetRepository.save(asset);s
     }
 
     async delete(id: number): Promise<void> {
@@ -49,6 +47,7 @@ export class AssetService {
         if (asset) {
             await this.assetRepository.remove(asset);
         }
+        else  
         
 
   
