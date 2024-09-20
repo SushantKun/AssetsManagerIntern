@@ -36,7 +36,7 @@ export class AssetService {
     async update(id: number, data: Partial<Asset>): Promise<Asset | null> {
         const asset = await this.findById(id);
         if (!asset) {
-            return null;
+            throw new Error(`Asset with id ${id} not found`);   
         }
 
         if (data.purchaseDate) {
