@@ -25,6 +25,7 @@ export class AssetService {
             purchaseDate: data.purchaseDate ? new Date(data.purchaseDate.toString()) : new Date(),
             isActive: true
         });
+        return this.assetRepository.save(asset);
     }
 
 
