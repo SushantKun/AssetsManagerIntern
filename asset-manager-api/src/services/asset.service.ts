@@ -26,6 +26,7 @@ export class AssetService {
             isActive: true
         });
         return this.assetRepository.save(asset);
+        return asset;
     }
 
 
