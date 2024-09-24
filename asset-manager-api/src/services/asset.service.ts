@@ -25,6 +25,9 @@ export class AssetService {
             purchaseDate: data.purchaseDate ? new Date(data.purchaseDate.toString()) : new Date(),
             isActive: true
         });
+        return this.assetRepository.save(asset);
+        return asset;
+    }
 
 
 
@@ -33,7 +36,7 @@ export class AssetService {
     async update(id: number, data: Partial<Asset>): Promise<Asset | null> {
         const asset = await this.findById(id);
         if (!asset) {
-            throw new Error(`Asset with id ${id} not found`);   
+            throw new Error(`Asset with id ${id} not found`);
         }
 
         if (data.purchaseDate) {
