@@ -27,6 +27,8 @@ export class AssetService {
         });
         return this.assetRepository.save(asset);
         return asset;
+
+        return this.assetRepository.save(asset);
     }
 
 
